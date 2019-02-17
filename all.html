@@ -1,0 +1,26 @@
+---
+layout: default
+title: All Posts
+permalink: /all/
+---
+
+<div class="home">
+  <h1 class="page-heading">归档</h1>
+
+    <ul class="year">
+    {% for post in posts %}
+      
+        <li>
+          {% if post.lastmod %}
+            <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
+            <span class="date">{{ post.lastmod | date: "%d-%m-%Y"  }}</span>
+          {% else %}
+            <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
+            <span class="date">{{ post.date | date: "%d-%m-%Y"  }}</span>
+          {% endif %}
+        </li>
+      
+    {% endfor %}
+  </ul>
+  
+</div>
