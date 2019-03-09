@@ -11,7 +11,24 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
-  
+  <div class="article-previous-next clearfix">
+	{%- if page.next -%}
+		{%- assign __path = page.next.url -%}
+		{%- include prepend-baseurl.html -%}
+		{%- assign href = __return -%}
+		{%- assign __locale = site.data.locale.PREVIOUS -%}
+		{%- include locale-to-string.html -%}
+		<div class="article-previous">下一篇：<span>{{ __return }}</span><a href="{{ href }}">{{ page.next.title }}</a></div>
+	{%- endif -%}
+	{%- if page.previous -%}
+		{%- assign __path = page.previous.url -%}
+		{%- include prepend-baseurl.html -%}
+		{%- assign href = __return -%}
+		{%- assign __locale = site.data.locale.NEXT -%}
+		{%- include locale-to-string.html -%}
+		<div class="article-next">上一篇：<span>{{ __return }}</span><a href="{{ href }}">{{ page.previous.title }}</a></div>
+	{%- endif -%}
+</div>
   {% include comment.html %}
 
 </div>
