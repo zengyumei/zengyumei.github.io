@@ -2,7 +2,7 @@
 layout: post
 title:  初识TypeScript
 summary: "TypeScript"
-date:   2019-3-15 12:51:18 +0700
+date:   2019-6-26 20:51:18 +0700
 categories: js知识点
 tags: 'js知识点'
 author: 曾宇媚

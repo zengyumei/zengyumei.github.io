@@ -29,7 +29,7 @@ excerpt_type: text # text | html
 
 header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
-    归档: /all/
+    归档: /archives/
     分类: /category/
     关于: /about/
     
