@@ -4,14 +4,14 @@ layout: default
 
 <div class="home">
   <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS Feed</a>
-  <h2 class="page-heading">文章</h2>
+  <h3 class="page-heading">文章</h3>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li>
-        <h2>
+        <h3>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        </h3>
         
         <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
 

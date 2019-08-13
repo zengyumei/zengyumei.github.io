@@ -5,7 +5,7 @@ permalink: /category/
 ---
 
 <div class="home">
-  <h2 class="page-heading">分类</h2>
+  <h3 class="page-heading">分类</h3>
 
   <ul class="post-list">
 
@@ -13,7 +13,7 @@ permalink: /category/
 {% assign category = categories | split:',' | sort %}
 {% for item in (0..site.categories.size) %}{% unless forloop.last %}
 {% capture word %}{{ category[item] | strip_newlines }}{% endcapture %}
-<h3 class="category" id="{{ word }}">{{ word | upcase }}</h3>
+<h4 class="category" id="{{ word }}">{{ word | upcase }}</h4>
 <ul>
 {% for post in site.categories[word] %}{% if post.title != null %}
 <li><span>{{ post.date | date: "%Y-%m-%d" }}</span> » <a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
